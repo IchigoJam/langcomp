@@ -6,6 +6,14 @@
 .t2027 {
   border-collapse: collapse;
 }
+.t2027 th {
+  padding: 0.5em .5em;
+  white-space: nowrap;
+  font-size: 80%;
+  line-height: 1.1em;
+  border: 1px solid black;
+  text-align: center;
+}
 .t2027 td {
   width: 20em;
   padding: 0.5em .5em;
@@ -19,10 +27,6 @@
   x-text-wrap: none;
   text-align: left;
 }
-.t2027 td:first-child {
-  text-align: center;
-  white-space: nowrap;
-}
 .d2027 {
   overflow-x: scroll;
 }
@@ -33,16 +37,18 @@
 <div class=d2027>
 <table class="t2027">
 <tr>
-<td></td>
+<th></th>
 <td>IchigoJam BASIC</td>
 <td>Python</td>
+<td>easy JavaScript</td>
 <td>JavaScript</td>
 <td>Java</td>
 <td>C</td>
 </tr><tr>
-<td>はじめのいっぽ</td>
+<th>はじめのいっぽ</th>
 <td>LED1</td>
 <td>print("Hello World!")</td>
+<td>alert("Hello World!")</td>
 <td>alert("Hello World!");</td>
 <td>class A {
   public static void main(String[] args) {
@@ -51,7 +57,7 @@
 }
 </td>
 </td>
-<td>#include "stdio.h"
+<td>#include &lt;stdio.h&gt;
 
 int main() {
   printf("Hello World\n");
@@ -60,40 +66,46 @@ int main() {
 </td>
 </td>
 </tr><tr>
-<td>キー押下数<br>
-（はじめのいっぽ）</td>
+<th>キー押下数<br>
+（はじめのいっぽ）</th>
 <td>5</td>
+<td>21</td>
 <td>22</td>
 <td>23</td>
 <td>95</td>
 <td>72</td>
 </td>
 </tr><tr>
-<td>表示</td>
+<th>表示</th>
 <td>?"ABC"</td>
 <td>print("ABC")</td>
+<td>console.log("ABC")</td>
 <td>console.log("ABC");</td>
 <td>System.out.println("ABC");</td>
 <td>printf("ABC\n");</td>
 </tr><tr>
-<td>変数代入</td>
+<th>変数代入</th>
 <td>A=10</td>
+<td>a = 10</td>
 <td>a = 10</td>
 <td>let a = 10;</td>
 <td>int a = 10;</td>
 <td>int a = 10;</td>
 </tr><tr>
-<td>計算</td>
+<th>計算</th>
 <td>S=A*10/B</td>
+<td>s = a * 10 / b</td>
 <td>s = a * 10 / b</td>
 <td>let s = a * 10 / b;</td>
 <td>int s = a * 10 / b;</td>
 <td>int s = a * 10 / b;</td>
 </tr><tr>
-<td>条件分岐</td>
+<th>条件分岐</th>
 <td>IF A=10 ?"T"</td>
 <td>if a == 10:
   print("T")</td>
+<td>if (a == 10)
+  console.log("T")</td>
 <td>if (a == 10)
   console.log("T");</td>
 <td>if (a == 10)
@@ -101,11 +113,13 @@ int main() {
 <td>if (a == 10)
   printf("T\n");</td>
 </tr><tr>
-<td>繰り返し<br>(ループ)</td>
+<th>繰り返し<br>(ループ)</th>
 <td>10 FOR I=0 TO 9
 20  ?I:NEXT</td>
 <td>for i in range(10):
   print(i)</td>
+<td>for (i = 0; i &lt; 10; i++)
+  console.log(i)</td>
 <td>for (let i = 0; i &lt; 10; i++)
   console.log(i);</td>
 <td>for (int i = 0; i &lt; 10; i++)
@@ -113,36 +127,40 @@ int main() {
 <td>for (int i = 0; i &lt; 10; i++)
   printf("%d\n", i);</td>
 </tr><tr>
-<td>論理式</td>
+<th>論理式</th>
 <td>A=1 AND B=2
-(A=1 &amp;&amp; B=2 でもOK)</td>
+(A==1 &amp;&amp; B==2 でもOK)</td>
 <td>a == 1 and b == 2</td>
 <td>a == 1 &amp;&amp; b == 2</td>
 <td>a == 1 &amp;&amp; b == 2</td>
 <td>a == 1 &amp;&amp; b == 2</td>
+<td>a == 1 &amp;&amp; b == 2</td>
 </tr><tr>
-<td>ビット演算</td>
+<th>ビット演算</th>
 <td>A&gt;&gt;4&amp;7</td>
 <td>(a &gt;&gt; 4) &amp; 7</td>
 <td>(a &gt;&gt; 4) &amp; 7</td>
 <td>(a &gt;&gt; 4) &amp; 7</td>
 <td>(a &gt;&gt; 4) &amp; 7</td>
+<td>(a &gt;&gt; 4) &amp; 7</td>
 </tr><tr>
-<td>16進数</td>
+<th>16進数</th>
 <td>#FFF</td>
 <td>0xFFF</td>
 <td>0xFFF</td>
 <td>0xFFF</td>
 <td>0xFFF</td>
+<td>0xFFF</td>
 </tr><tr>
-<td>2進数</td>
+<th>2進数</th>
 <td>`11010001</td>
 <td>0b1101001</td>
 <td>0b1101001</td>
 <td>0b1101001</td>
 <td>0b1101001</td>
+<td>0b1101001</td>
 </tr><tr>
-<td>サブルーチン<br>(関数)<br>(メソッド)</td>
+<th>サブルーチン<br>(関数)<br>(メソッド)</th>
 <td>10 ?"SUB":RETURN
 
 GOSUB 10
@@ -152,6 +170,12 @@ GOSUB 10
   print("SUB")
 
 sub()</td>
+<td>function sub() {
+  console.log("SUB")
+}
+
+sub();
+</td>
 <td>const sub = () =&gt; {
   console.log("SUB");
 };
@@ -172,7 +196,7 @@ static void sub() {
   sub();
 </td>
 </tr><tr>
-<td>コメント</td>
+<th>コメント</th>
 <td>' COMMENT
 REM COMMENT</td>
 <td># COMMENT
@@ -190,20 +214,29 @@ COMMENT複数行
 COMMENT複数行
 */
 </td>
+<td>// COMMENT
+/*
+COMMENT複数行
+*/
+</td>
 <td>/*
 COMMENT複数行
 */
 </td>
 </tr><tr>
-<td>文字列処理<br>
+<th>文字列処理<br>
 (左3文字)<br>
-(右3文字)</td>
+(右3文字)</th>
 <td>10 S="ABCDE"
 20 ?STR$(S,3)
 30 ?STR$(S+LEN(S)-3)</td>
 <td>s = "ABCDE"
 print(s[0:2])
 print(s[-3:])
+</td>
+<td>const s = "ABCDE"
+console.log(s.substring(0, 3))
+console.log(s.substring(s.length - 3))
 </td>
 <td>const s = "ABCDE";
 console.log(s.substring(0, 3));
@@ -214,33 +247,38 @@ System.out.println(s.substring(0, 3));
 System.out.println(s.substring(s.length() - 3));
 </td>
 <td>const char s[] = "ABCDE";
-for (int i = 0; i < 3; i++)
+for (int i = 0; i &lt; 3; i++)
   putchar(s[i]);
 putchar('\n');
-for (int i = strlen(s) - 3; i < strlen(s); i++)
-  putchar(s[i]);
-putchar('\n');
+printf("%s\n", s + strlen(s) - 3);
 </td>
 </tr><tr>
-<td>配列</td>
+<th>配列</th>
 <td>10 LET[0],5,3,1
 20 N=0
 30 FOR I=0 TO 2
 40  N=N+[I]:NEXT
 50 ?N</td>
-<td>a = [ 5, 3, 1 ]
+<td>a = [5, 3, 1]
 n = 0
 for m in a:
   n += m
 print(n)</td>
-<td>const a = [ 5, 3, 1 ];
+<td>a = [5, 3, 1]
+n = 0
+for (m in a) {
+  n += a[m]
+}
+alert(n)
+</td>
+<td>const a = [5, 3, 1];
 let n = 0;
 for (const m in a) {
   n += a[m];
 }
 alert(n);
 </td>
-<td>int a[] = [ 5, 3, 1 ];
+<td>int a[] = [5, 3, 1];
 int n = 0;
 for (int m : a) {
   n += a[m];
@@ -255,10 +293,11 @@ for (int i = 0; i &lt; 3; i++) {
 printf("%d\n", n);
 </td>
 </tr><tr>
-<td>特徴</td>
-<td>シンプル、格安、省エネ<br>大規模開発に向かない</td>
-<td>インデント大事<br>ライブラリ豊富</td>
-<td>ブラウザだけで作れる<br>PCもスマホもOK!</td>
+<th>特徴</th>
+<td>格安、省エネ、低速<br>大規模開発に向かない<br>打つ文字少ない</td>
+<td>インデント大事<br>ライブラリ豊富<br>打つ文字少ない</td>
+<td>ブラウザだけで作れる<br>PCもスマホもOK!<br>打つ文字少ない</td>
+<td>ブラウザだけで作れる<br>PCもスマホもOK!<br>大規模開発もOK!</td>
 <td>なかなか高速<br>Androidアプリの標準言語<br>サーバー上でもよく使われる</td>
 <td>基本的に最速<br>マシン語に近い<br>IchigoJam BASICの開発言語</td>
 </tr>
@@ -272,26 +311,26 @@ const tbl = document.body.querySelector("table");
 const ths = tbl.querySelectorAll("tr")[0].querySelectorAll("td");
 const langs = [];
 for (const th of ths) {
-	if (th.textContent) {
-		langs.push(th.textContent);
-	}
+  if (th.textContent) {
+    langs.push(th.textContent);
+  }
 }
 console.log(langs);
 const style = document.createElement("style");
 document.body.appendChild(style);
 const ss = [];
 langs.forEach((l, idx) => {
-	const chk = new InputCheckbox(l, true);
-	chkslang.appendChild(chk);
-	chk.onchange = () => {
-		const b = chk.checked;
-		if (!b) {
-			ss[idx] = `td:nth-child(${idx + 2}) { display: none }`;
-		} else {
-			ss[idx] = "";
-		}
-		style.textContent = ss.join("\n");
-	};
+  const chk = new InputCheckbox(l, true);
+  chkslang.appendChild(chk);
+  chk.onchange = () => {
+    const b = chk.checked;
+    if (!b) {
+      ss[idx] = `td:nth-child(${idx + 2}) { display: none }`;
+    } else {
+      ss[idx] = "";
+    }
+    style.textContent = ss.join("\n");
+  };
 });
 </script>
 
